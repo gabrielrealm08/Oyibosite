@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="course.css" type="text/css" rel="stylehseet">
+  </head>
+  <body>
+    <header>
+      <h1>Oyibo Industries Inc.</h1>
+      <h4>Greatest tech company with inspiring goals</h4>
+    </header>
+    <section>
+      <h2>WELCOME:</h2>
+      <p>
+        VISION: To create magnificient web application and mobile application
+        for clients all over the world.
+      </p>
+      <br />
+      <br />
+      <p>
+        ABOUT US: Founded in 2019, by Oyibo family. We've delivered projects to
+        over 100 clients and we are known as the best for what we do!.
+      </p>
+    </section>
+    <section class="blue container">
+     <h2>
+          Team:
+     <h2>
+      <article class="card">
+          <div class="icons">&#9749;</div>
+          <h3>Gabriel Oyibo</h3>
+          <p>Jnr. Web Developer - Creates beautiful
+          websites for businesses in Nigeria.</p>
+          <button>Learn More</button>
+     </article>
+     <article class="card">
+          <div class="icons">&#9734;</div>
+          <h3>Micheal Oyibo</h3>
+          <p>snr. software engineer - create softwares using the right programming languages, platforms and architectures in UK.</p>
+          <button>Learn More</button>
+     </article>
+    </section>
+    <section>
+      <h2>
+        Services:
+      <h2>
+     <h3>Job Description:</h3>
+     <form id="my-form" >
+     </form>
+     <table>
+          <tr>
+          <td> Name: </td>
+          <td>
+               <input type="text" size="25"
+             name="my-name">
+          </td>
+          </tr>
+          <tr>
+          <td> Email Address: </td>
+          <td>
+               <input type="text" size="25"
+               name="my-address">
+          </td>
+          </tr>
+          <tr>
+               <td> Projects: </td>
+               <td>
+                    <select name="my-project">
+                    <option> Business Website </option>
+                    <option> Web application </option>
+                    <option> Mobile Application </option>
+                    </select>
+               </td>
+          </tr>
+          <tr>
+               <td> Project Quantity: </td>
+               <td>
+                    <input type="number" name="my-prj"
+                    value="1" min="1" max="5">
+                    <small>(max 5)</small> 
+               </td>
+          </tr>
+          <tr>
+               <br>
+          </tr>
+          <tr>
+               <td colspan="2">
+                    <input class="button"
+                    type="button"
+                    value="Process Job"
+                    onclick="placeOrder();">
+                    <input class="button"
+                    type="reset" 
+                    value="Clear"
+                    onclick="document.getElementById('myorder').style.display = 'none'";> 
+               </td>               
+          </tr>
+     </table>
+     <br>
+          <div id="my-project">
+          </div>
+     </form>
+    </section>
+    <div class="footer">
+      <h3>Thanks for visiting.</h3>
+      <div>
+        <article><h3>Get in Touch.
+          <p>The best
+          place to get business websites, mobile application, web application
+        </article>
+        <article>
+          <h3>Contact Us:</h3>
+          <p>We would love to hear from you.
+            <br> Call or email us. <br>
+            Mobile: 08084924195
+            Email: oyibo.ng@gmail.com
+          </p>
+          </article>
+      </div>
+      <div class="circle">O</div>
+      <div class="circle">I</div>
+      <div class="circle">I</div>
+      &copy;, 2019 Oyibo inc.
+    </div>
+    <script src="course.js"></script>
+  </body>
+</html>

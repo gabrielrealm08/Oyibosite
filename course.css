@@ -1,0 +1,84 @@
+body {
+  font-family: tahoma;
+  text-align: center;
+}
+
+header {
+  letter-spacing: 6px;
+  background: royalblue;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  width: 100%;
+}
+
+section {
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ccc;
+  background-color: deeppink;
+  margin: 25px;
+  padding: 25px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+.icons {
+  font-size: 8em;
+  padding: 25px;
+}
+
+button,
+.button {
+  background: royalblue;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.blue {
+  background: teal;
+}
+
+td {
+  padding: 10px;
+}
+
+table {
+  margin: auto;
+}
+
+#my-project {
+  background-color: #29c1c4;
+  padding: 25px;
+  display: none;
+}
+
+.footer {
+  padding: 30px;
+  background: grey;
+}
+
+.circle {
+  color: white;
+  font-size: 2.5em;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 15px;
+  border-radius: 50%;
+  background: deeppink;
+  padding: 5px 10px 15px 10px;
+  font-family: helvetica;
+}
