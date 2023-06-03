@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "9574cae5-51b9-4889-b480-dbae377824b0",
+		"name": "Postman Library API v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get books",
+			"_postman_id": "2dcf8bda-23aa-46d0-b575-7130cfa22708",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://library-api.postmanlabs.com/books?genre=fiction&checkedOut=false",
+					"protocol": "https",
+					"host": [
+						"library-api",
+						"postmanlabs",
+						"com"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "fiction"
+						},
+						{
+							"key": "checkedOut",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get fiction books",
+			"_postman_id": "b2b3fde9-d620-4b2a-ac25-48f37d71391d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/books?genre=fiction&checkedOut=false",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "fiction"
+						},
+						{
+							"key": "checkedOut",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get books by id",
+			"_postman_id": "69455772-f205-48a5-85cc-6f23fc7ee0b7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/books/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{id}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add  a Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "59b7c4ba-b61f-4723-8f63-9c4c507e511a",
+						"exec": [
+							"const id = pm.response.json().id\r",
+							"pm.collectionVariables.set(\"id\", id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "e6a05a8d-4ba6-4880-81e8-5b3f00cd9c81",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"author\": \"Harper Lee\",\r\n  \"genre\": \"fiction\",\r\n  \"yearPublished\": 1960\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/books"
+			},
+			"response": []
+		},
+		{
+			"name": "checkout a book",
+			"_postman_id": "a63d7981-1508-4eb8-9a30-e1f28d54f3ad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"checkedOut\": true \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/books/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{id}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a book",
+			"_postman_id": "8f3f6aeb-3140-4567-ab7d-16aa42d6f691",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/books/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"id": "f0e5908c-95d2-45ed-bbec-4c6f375b1969",
+							"key": "id",
+							"value": "{{id}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"value": "postmanrulz",
+			"key": "api-key"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d607e395-ba09-4488-902d-36ae9299292e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8bb69f4f-900a-41a7-bddb-7749d0e73250",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "86ad68e7-a2f4-4a75-9569-268d54883ff3",
+			"key": "baseUrl",
+			"value": "https://library-api.postmanlabs.com",
+			"type": "string"
+		},
+		{
+			"id": "3547a1cd-5a42-4501-9d90-64159f93baf0",
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "af1fbf44-9635-4f08-b817-92e39cb1ef0a",
+			"key": "id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
