@@ -7,7 +7,7 @@
 	"item": [
 		{
 			"name": "Get books",
-			"_postman_id": "2dcf8bda-23aa-46d0-b575-7130cfa22708",
+			"id": "2dcf8bda-23aa-46d0-b575-7130cfa22708",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "Get fiction books",
-			"_postman_id": "b2b3fde9-d620-4b2a-ac25-48f37d71391d",
+			"id": "b2b3fde9-d620-4b2a-ac25-48f37d71391d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -72,7 +72,7 @@
 		},
 		{
 			"name": "Get books by id",
-			"_postman_id": "69455772-f205-48a5-85cc-6f23fc7ee0b7",
+			"id": "69455772-f205-48a5-85cc-6f23fc7ee0b7",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -91,8 +91,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "{{id}}",
-							"type": "string"
+							"value": "{{id}}"
 						}
 					]
 				}
@@ -114,7 +113,7 @@
 					}
 				}
 			],
-			"_postman_id": "e6a05a8d-4ba6-4880-81e8-5b3f00cd9c81",
+			"id": "e6a05a8d-4ba6-4880-81e8-5b3f00cd9c81",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -136,7 +135,7 @@
 		},
 		{
 			"name": "checkout a book",
-			"_postman_id": "a63d7981-1508-4eb8-9a30-e1f28d54f3ad",
+			"id": "a63d7981-1508-4eb8-9a30-e1f28d54f3ad",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -164,8 +163,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "{{id}}",
-							"type": "string"
+							"value": "{{id}}"
 						}
 					]
 				}
@@ -174,7 +172,7 @@
 		},
 		{
 			"name": "delete a book",
-			"_postman_id": "8f3f6aeb-3140-4567-ab7d-16aa42d6f691",
+			"id": "8f3f6aeb-3140-4567-ab7d-16aa42d6f691",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -203,11 +201,22 @@
 						{
 							"id": "f0e5908c-95d2-45ed-bbec-4c6f375b1969",
 							"key": "id",
-							"value": "{{id}}",
-							"type": "string"
+							"value": "{{id}}"
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "bc4fab7e-3c53-4ce3-ae55-1b3afa59af2d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
@@ -243,22 +252,19 @@
 	],
 	"variable": [
 		{
-			"id": "86ad68e7-a2f4-4a75-9569-268d54883ff3",
+			"id": "a7a22617-98bc-4288-a3fa-263267efedf6",
 			"key": "baseUrl",
-			"value": "https://library-api.postmanlabs.com",
-			"type": "string"
+			"value": "https://library-api.postmanlabs.com"
 		},
 		{
-			"id": "3547a1cd-5a42-4501-9d90-64159f93baf0",
+			"id": "35109e59-664b-46ec-877c-19e5027d6b29",
 			"key": "baseUrl",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "af1fbf44-9635-4f08-b817-92e39cb1ef0a",
+			"id": "24acc427-99db-4c69-98e0-afe24f0d450b",
 			"key": "id",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
